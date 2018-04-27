@@ -10,16 +10,16 @@ import { Address, User } from '../_models/user';
 })
 export class TableComponent implements OnInit {
   private users: User[];
-  private filteredUsers: User[];
+  filteredUsers: User[];
   
   private genderFilter: string = null;
-  private genders: Map<string, number>;
+  genders: Map<string, number>;
   
   private departmentFilter: string = null;
-  private departments: Map<string, number>;
+  departments: Map<string, number>;
 
   private cityFilter: string = null;
-  private cities: Map<string, number>;
+  cities: Map<string, number>;
 
   private sortFlag: number = 1;
   private oldSortArg: string = null;

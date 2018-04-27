@@ -31,10 +31,7 @@ export class FilterComponent implements OnInit {
     this.userService.getUsers().subscribe(
       users => {
         this.users = users;
-
         this.filter();
-
-        this.dataService.changeFilteredUsers(users);
       }
     );
   }

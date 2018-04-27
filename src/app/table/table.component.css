@@ -22,6 +22,14 @@ table {
     width: 100%;
 }
 
+th.north-sort {
+    cursor: n-resize;
+}
+
+th.south-sort {
+    cursor: s-resize;
+}
+
 .container {
     display: flex;
 }

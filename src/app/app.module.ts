@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TableComponent } from './table/table.component';
 import { UserService } from './_services/user.service';
 import { HttpClientModule } from '@angular/common/http';
+import { DataService } from './_services/data.service';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   providers: [
-    UserService
+    UserService,
+    DataService
   ],
   bootstrap: [AppComponent]
 })

@@ -38,16 +38,7 @@ export class TableComponent implements OnInit {
         if (a[arg] < b[arg]) return -this.sortFlag;
       });
 
-      this.users.sort((a, b) => {
-        if (a[arg] > b[arg]) return this.sortFlag;
-        if (a[arg] < b[arg]) return -this.sortFlag;
-      });
     } else {  // custom sorting by Objects
-      this.users.sort((a, b) => {
-        if (a.address.city + a.address.street > b.address.city + b.address.street) return this.sortFlag;
-        if (a.address.city + a.address.street < b.address.city + b.address.street) return -this.sortFlag;
-      });
-
       this.users.sort((a, b) => {
         if (a.address.city + a.address.street > b.address.city + b.address.street) return this.sortFlag;
         if (a.address.city + a.address.street < b.address.city + b.address.street) return -this.sortFlag;

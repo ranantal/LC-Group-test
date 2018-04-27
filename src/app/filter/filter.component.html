@@ -1,0 +1,37 @@
+<div class="filters">
+  <div>
+    GENDER <br>
+    <label *ngFor="let gender of getKeys(genders)" >
+      <input type="checkbox" [checked]="gender === genderFilter" (click)="
+      genderFilter ?
+        genderFilter = null :
+        genderFilter = gender;
+      filter();
+      "> {{gender}} ({{this.genders[gender]}}) <br>
+    </label>
+  </div>
+
+  <div>
+    DEPARTMENT <br>
+    <label *ngFor="let department of getKeys(departments)" >
+      <input type="checkbox" [checked]="department === departmentFilter" (click)="
+      departmentFilter ?
+        departmentFilter = null :
+        departmentFilter = department;
+      filter()
+      "> {{department}} ({{this.departments[department]}}) <br>
+    </label>
+  </div>
+
+  <div>
+    CITY <br>
+    <label *ngFor="let city of getKeys(cities)" >
+      <input type="checkbox" [checked]="city === cityFilter" (click)="
+      cityFilter ? 
+        cityFilter = null : 
+        cityFilter = city; 
+      filter()
+      "> {{city}} ({{this.cities[city]}}) <br>
+    </label>
+  </div>
+</div>

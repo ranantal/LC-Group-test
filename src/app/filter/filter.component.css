@@ -1,0 +1,11 @@
+@media screen and (min-width: 950px) {
+    .filters {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 949px) {
+    .filters {
+        display: block;
+    }
+}

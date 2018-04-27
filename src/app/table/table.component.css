@@ -1,18 +1,10 @@
 @media screen and (min-width: 950px) {
-    .filters {
-        display: flex;
-    }
-
     .col-5 {
         display: inherit;
     }
 }
 
 @media screen and (max-width: 949px) {
-    .filters {
-        display: block;
-    }
-
     .col-5 {
         display: none;
     }
@@ -20,6 +12,7 @@
 
 table {
     width: 100%;
+    max-width: 1200px;
 }
 
 th.north-sort {
@@ -28,12 +21,4 @@ th.north-sort {
 
 th.south-sort {
     cursor: s-resize;
-}
-
-.container {
-    display: flex;
-}
-
-.user-table {
-    flex-grow: 1;
 }

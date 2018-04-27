@@ -13,7 +13,7 @@
         <th class="col-5" (click)="sort('address')"  [class.south-sort]="oldSortArg !== 'address' || sortFlag === 1"
         [class.north-sort]="oldSortArg === 'address' && sortFlag === -1">Address</th>
       </tr>
-    <tr *ngFor="let user of filteredUsers">
+    <tr *ngFor="let user of users">
         <td>{{user.name}}</td>
         <td>{{user.age}}</td>
         <td>{{user.gender}}</td>
@@ -21,43 +21,5 @@
         <td class="col-5" >{{user.address.city}}, {{user.address.street}}</td>
       </tr>
     </table>
-  </div>
-
-  <div class="filters">
-    <div>
-      GENDER <br>
-      <label *ngFor="let gender of getKeys(genders)" >
-        <input type="checkbox" [checked]="gender === genderFilter" (click)="
-        genderFilter ?
-          genderFilter = null :
-          genderFilter = gender;
-        filter();
-        "> {{gender}} ({{this.genders[gender]}}) <br>
-      </label>
-    </div>
-
-    <div>
-      DEPARTMENT <br>
-      <label *ngFor="let department of getKeys(departments)" >
-        <input type="checkbox" [checked]="department === departmentFilter" (click)="
-        departmentFilter ?
-          departmentFilter = null :
-          departmentFilter = department;
-        filter()
-        "> {{department}} ({{this.departments[department]}}) <br>
-      </label>
-    </div>
-
-    <div>
-      CITY <br>
-      <label *ngFor="let city of getKeys(cities)" >
-        <input type="checkbox" [checked]="city === cityFilter" (click)="
-        cityFilter ? 
-          cityFilter = null : 
-          cityFilter = city; 
-        filter()
-        "> {{city}} ({{this.cities[city]}}) <br>
-      </label>
-    </div>
   </div>
 </div>
